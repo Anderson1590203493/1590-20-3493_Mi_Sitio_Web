@@ -1,0 +1,125 @@
+#bgvideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url(COSMOS.mp4) no-repeat;
+    background-size: cover;
+
+
+    
+
+}
+video{
+    display: block;
+}
+.imagen
+body{
+    margin: 0;
+    font-family: hg mincho light;
+     }
+
+    header{
+        width: 100%;
+        background: #045874;
+    }
+
+    #btn-menu{
+        display: none;
+}
+
+    header label{
+        display: none;
+        width: 30px;
+        padding: 10px;
+        border-right: 1px solid #fff; 
+ }
+
+    header label:hover {
+        cursor: pointer;
+        background: rgba(0,0,0,0.3);
+}
+
+    .menu ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+
+    .menu li:hover {
+     border-right: 1px solid #fff;
+    }
+
+    .menu li a:hover {
+        background: rgba(0,0,0,0.3);
+    }
+
+    .menu li a{
+        display: block;
+        padding: 15px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        main {
+            padding: 20px;
+        }
+
+    @media (max-width:720px){
+header label {
+    display: block;
+}
+
+.menu {
+    position: absolute;
+    background: #4e94ab;
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.7s;
+}
+
+.menu ul{
+    flex-direction: column;
+}
+
+.menu li{
+        border-top: 1px solid #fff;
+        }
+    #btn-menu:checked ~ .menu{
+ margin: 0;
+    }
+    }
+    .contenedor-galeria {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: auto;
+    }
+    .galeria__img {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 30px;
+        object-fit: cover;
+        filter: brightness(70%);
+        cursor: pointer;
+        animation: escalar 1.5s infinite alternate;
+    }
+    @keyframes escalar{
+        to{
+            transform: scale(1);
+        }
+        from {
+            transform: scale(1.5s);
+        }
+    }
+    .galeria__img:hover {
+        filter: brightness(100%);
+
+    }
